@@ -38,104 +38,44 @@ nav {
 }
 
 .menu-toggle {
-    display: none; /* Ocultar el botón en desktop */
+    display: none;
     font-size: 1.5rem;
     background: none;
     border: none;
     cursor: pointer;
 }
 
-.hero {
-    text-align: center;
-    padding: 2rem 1rem;
-    background-color: #007bff;
-    color: white;
-}
-
-.hero h1 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-}
-
-.hero form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-}
-
-.hero input {
-    padding: 0.5rem;
-    border: none;
-    border-radius: 5px;
-    width: 100%;
-    max-width: 300px;
-}
-
-.hero button {
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 5px;
-    background-color: #ffc107;
-    color: #333;
-    cursor: pointer;
-    width: 100%;
-    max-width: 300px;
-}
-
-.features {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem 1rem;
-    background-color: #f8f9fa;
-    gap: 1rem;
-}
-
-.feature-card {
-    text-align: center;
-    max-width: 300px;
-}
-
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #333;
-    color: white;
-}
-
 /* Media queries para móviles */
 @media (max-width: 768px) {
     .menu-toggle {
-        display: block; /* Mostrar el botón en móviles */
+        display: block;
     }
 
     .nav-links {
-        display: none; /* Ocultar el menú en móviles */
+        display: none;
         flex-direction: column;
         position: absolute;
         top: 100%;
-        right: 0;
+        left: 0;
         background-color: #f8f9fa;
         border: 1px solid #ddd;
         width: 100%;
-        text-align: center;
-        box-sizing: border-box; /* Incluir padding y border en el ancho */
-        z-index: 1000; /* Asegurar que esté por encima del contenido */
+        box-sizing: border-box;
+        z-index: 1000;
     }
 
     .nav-links.active {
-        display: flex; /* Mostrar el menú cuando está activo */
+        display: flex;
     }
 
     .nav-links li {
         padding: 1rem;
-        text-align: center; /* Centrar el texto */
-        white-space: nowrap; /* Evitar que el texto se divida en varias líneas */
+        text-align: center;
+        white-space: nowrap;
     }
 
     .nav-links li a {
-        display: block; /* Hacer que los enlaces ocupen todo el ancho */
-        padding: 0.5rem 0; /* Añadir espacio vertical */
+        display: block;
+        padding: 0.5rem 0;
     }
 }
