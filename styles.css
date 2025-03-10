@@ -10,19 +10,21 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 1rem;
     background-color: #f8f9fa;
     border-bottom: 1px solid #ddd;
 }
 
 .logo img {
-    height: 50px;
+    height: 40px; /* Reducir el tamaño del logo para móviles */
 }
 
 nav ul {
     list-style: none;
     display: flex;
     gap: 1rem;
+    padding: 0;
+    margin: 0;
 }
 
 nav ul li a {
@@ -33,28 +35,29 @@ nav ul li a {
 
 .hero {
     text-align: center;
-    padding: 4rem 2rem;
+    padding: 2rem 1rem; /* Reducir el padding para móviles */
     background-color: #007bff;
     color: white;
 }
 
 .hero h1 {
-    font-size: 2.5rem;
+    font-size: 1.8rem; /* Reducir el tamaño del título para móviles */
     margin-bottom: 1rem;
 }
 
 .hero form {
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* Cambiar a columna en móviles */
+    align-items: center;
     gap: 1rem;
-    flex-wrap: wrap;
 }
 
 .hero input {
     padding: 0.5rem;
     border: none;
     border-radius: 5px;
-    width: 300px;
+    width: 100%; /* Ocupar el 100% del ancho en móviles */
+    max-width: 300px; /* Limitar el ancho máximo */
 }
 
 .hero button {
@@ -64,13 +67,17 @@ nav ul li a {
     background-color: #ffc107;
     color: #333;
     cursor: pointer;
+    width: 100%; /* Ocupar el 100% del ancho en móviles */
+    max-width: 300px; /* Limitar el ancho máximo */
 }
 
 .features {
     display: flex;
-    justify-content: space-around;
-    padding: 2rem;
+    flex-direction: column; /* Cambiar a columna en móviles */
+    align-items: center;
+    padding: 2rem 1rem; /* Reducir el padding para móviles */
     background-color: #f8f9fa;
+    gap: 1rem;
 }
 
 .feature-card {
@@ -83,4 +90,26 @@ footer {
     padding: 1rem;
     background-color: #333;
     color: white;
+}
+
+/* Media queries para móviles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Cambiar a columna en móviles */
+        align-items: center;
+        gap: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column; /* Cambiar a columna en móviles */
+        align-items: center;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem; /* Ajustar el tamaño del título para móviles */
+    }
+
+    .features {
+        padding: 1rem; /* Reducir el padding para móviles */
+    }
 }
