@@ -120,6 +120,8 @@ footer {
         border: 1px solid #ddd;
         width: 100%;
         text-align: center;
+        box-sizing: border-box; /* Incluir padding y border en el ancho */
+        z-index: 1000; /* Asegurar que esté por encima del contenido */
     }
 
     .nav-links.active {
@@ -128,5 +130,12 @@ footer {
 
     .nav-links li {
         padding: 1rem;
+        text-align: center; /* Centrar el texto */
+        white-space: nowrap; /* Evitar que el texto se divida en varias líneas */
+    }
+
+    .nav-links li a {
+        display: block; /* Hacer que los enlaces ocupen todo el ancho */
+        padding: 0.5rem 0; /* Añadir espacio vertical */
     }
 }
