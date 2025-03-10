@@ -1,0 +1,337 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    padding-bottom: 2rem; /* Espacio antes del footer */
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #007bff;
+    color: white;
+    position: relative; /* Para posicionar el menú correctamente */
+}
+
+.logo img {
+    height: 40px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+.nav-links li a.register-button {
+    background-color: #ffc107;
+    color: #333;
+    border-radius: 5px;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 4rem 1rem;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.hero h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.hero form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.hero input {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.hero button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    background-color: white;
+}
+
+.feature-card {
+    text-align: center;
+    max-width: 300px;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+    color: #666;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+}
+
+/* Media queries para móviles */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Mostrar el botón en móviles */
+    }
+
+    .nav-links {
+        display: none; /* Ocultar el menú en móviles */
+        flex-direction: column;
+        width: 100%;
+        background-color: #007bff;
+        position: absolute;
+        top: 100%; /* Colocar el menú debajo del header */
+        left: 0;
+        padding: 1rem 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex; /* Mostrar el menú cuando está activo */
+    }
+
+    .nav-links li {
+        text-align: center;
+    }
+
+    .nav-links li a {
+        display: block;
+        padding: 1rem;
+        color: white;
+    }
+
+    .nav-links li a.register-button {
+        background-color: #ffc107;
+        color: #333;
+        margin: 0.5rem auto; /* Centrar el botón */
+        width: 80%; /* Ancho del botón */
+        border-radius: 5px;
+    }
+
+    .features {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+/* Buscar Section */
+.buscar {
+    padding: 2rem;
+    text-align: center;
+}
+
+.buscar h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.buscar form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.buscar input {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.buscar button[type="submit"] {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Resultados de búsqueda */
+.resultados {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.profesional-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    width: 100%;
+    max-width: 300px;
+    text-align: left;
+}
+
+.profesional-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.profesional-card p {
+    margin: 0.5rem 0;
+}
+
+.profesional-card button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Registro Section */
+.registro {
+    padding: 2rem;
+    text-align: center;
+}
+
+.registro h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.registro form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.registro input {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.registro button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Login Section */
+.login {
+    padding: 2rem;
+    text-align: center;
+}
+
+.login h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.login form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.login input {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.login button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+}

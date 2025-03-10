@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Encuentra tu profesional</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- El header se cargará dinámicamente aquí -->
+
+    <!-- Registro Section -->
+    <section class="registro">
+        <h2>Regístrate como profesional</h2>
+        <form id="registroForm">
+            <input type="text" id="nombre" placeholder="Nombre completo" required>
+            <input type="email" id="email" placeholder="Correo electrónico" required>
+            <input type="text" id="especialidad" placeholder="Especialidad" required>
+            <input type="text" id="ubicacion" placeholder="Ubicación" required>
+            <button type="submit">Registrarse</button>
+        </form>
+    </section>
+
+    <!-- El footer se cargará dinámicamente aquí -->
+
+    <!-- Cargar el header y el footer dinámicamente -->
+    <script src="loadHeader.js"></script>
+    <script src="loadFooter.js"></script>
+    <!-- Cargar Firebase y el script de registro -->
+    <script type="module" src="registro.js"></script>
+</body>
+</html>

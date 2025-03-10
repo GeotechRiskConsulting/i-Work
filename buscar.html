@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar profesionales - Encuentra tu profesional</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- El header se cargará dinámicamente aquí -->
+
+    <!-- Buscar Section -->
+    <section class="buscar">
+        <h1>Buscar profesionales</h1>
+        <form id="buscarForm">
+            <input type="text" id="nombreInput" placeholder="Nombre del profesional">
+            <input type="text" id="especialidadInput" placeholder="Especialidad">
+            <button type="submit">Buscar</button>
+        </form>
+
+        <!-- Resultados de búsqueda -->
+        <div id="resultados" class="resultados"></div>
+    </section>
+
+    <!-- El footer se cargará dinámicamente aquí -->
+
+    <!-- Cargar el header y el footer dinámicamente -->
+    <script src="loadHeader.js"></script>
+    <script src="loadFooter.js"></script>
+    <!-- Cargar Firebase y el script de búsqueda -->
+    <script type="module" src="buscar.js"></script>
+</body>
+</html>
